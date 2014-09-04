@@ -12,6 +12,7 @@
 <!-- Le styles -->
 <link href="css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="css/layoutit.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -20,18 +21,25 @@
 
 	<!-- Fav and touch icons -->
 	<link rel="shortcut icon" href="img/favicon.png">
-	
+	<link type="text/css" rel="stylesheet" href=".\css\font-titillium.css"/>
 	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
 	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="js/jquery.htmlClean.js"></script>
-<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="ckeditor/config.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/jquery.htmlClean.js"></script>
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="ckeditor/config.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/plugin.js"></script>
+	<script type="text/javascript" src="./js/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="./js/jquery.jstree.js"></script>
+	<script type="text/javascript" src="./js/tooltip.js"></script>
+	<script type="text/javascript" src="./js/transition.js"></script>
+
 </head>
 
 <body style="min-height: 660px; cursor: auto;" class="edit">
@@ -44,9 +52,7 @@
       	<ul class="nav" id="menu-layoutit">
           <li class="divider-vertical"></li>
           <li>
-            <div class="btn-group">
-              <a class="btn btn-primary" href="http://justjavac.com" target="_blank"><i class="icon-home icon-white"></i>首页</a>
-            </div>
+          
             <div class="btn-group" data-toggle="buttons-radio">
               <button type="button" id="edit" class="btn btn-primary active"><i class="icon-edit icon-white"></i>编辑</button>
               <button type="button" class="btn btn-primary" id="devpreview"><i class="icon-eye-close icon-white"></i>布局编辑</button>
@@ -63,14 +69,7 @@
 			</div>
           </li>
         </ul>
-        <ul class="nav pull-right">
-               	  <li>
-               	  <div class="btn-group">
-               	  <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&repo=layoutit&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe></span>
-			      <span><iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=justjavac&repo=layoutit&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe></span>
-			      </div>
-			      </li>
-          </ul>
+         
       </div>
       <!--/.nav-collapse --> 
     </div>
@@ -576,7 +575,7 @@
                 <div class="hero-unit" contenteditable="true">
                   <h1>Hello, world!</h1>
                   <p>这是一个可视化布局模板, 你可以点击模板里的文字进行修改, 也可以通过点击弹出的编辑框进行富文本修改. 拖动区块能实现排序. </p>
-                  <p><a class="btn btn-primary btn-large" href="#">参看更多 »</a></p>
+                  <p><a class="btn btn-primary btn-large" href="#">参看更多 ?</a></p>
                 </div>
               </div>
             </div>
@@ -595,7 +594,7 @@
               <div class="view">
                 <h2 contenteditable="true">标题</h2>
                 <p contenteditable="true">本可视化布局程序在HTML5浏览器上运行更加完美, 能实现自动本地化保存, 即使关闭了网页, 下一次打开仍然能恢复上一次的操作.</p>
-                <p><a class="btn" href="#" contenteditable="true">查看更多 »</a></p>
+                <p><a class="btn" href="#" contenteditable="true">查看更多 ?</a></p>
               </div>
             </div>
             <div class="box box-element ui-draggable"> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span>
@@ -832,7 +831,7 @@
                       </div>
                     </div>
                   </div>
-                  <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a> <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a> </div>
+                  <a data-slide="prev" href="#myCarousel" class="left carousel-control">?</a> <a data-slide="next" href="#myCarousel" class="right carousel-control">?</a> </div>
               </div>
             </div>
           </li>
@@ -853,22 +852,7 @@
   <span class="drag label"><i class="icon-move"></i>drag</span>
   <div class="preview">9 3</div>
   <div class="view">
-    <div class="row-fluid clearfix">
-      <div class="span12 column ui-sortable">
-        
-        <div class="box box-element ui-draggable" style="display: block; "> <a href="#close" class="remove label label-important"><i class="icon-remove icon-white"></i>删除</a> <span class="drag label"><i class="icon-move"></i>拖动</span> <span class="configuration"><button type="button" class="btn btn-mini" data-target="#editorModal" role="button" data-toggle="modal">编辑</button> <a class="btn btn-mini" href="#" rel="well">嵌入</a> </span>
-              <div class="preview">概述</div>
-              <div class="view">
-                <div class="hero-unit" contenteditable="true">
-                  <p>一种风，只流浪在一座山谷；</p>
-                  <p>一道堤，只护住一湾星河。</p>
-                  <p>每次仰望星空，我总是闭上眼，</p>
-                  <p>因为最美的一颗不在天上。</p>                  
-                </div>
-              </div>
-            </div>
-      </div>
-    </div>
+    
   </div>
 </div>
 
@@ -922,3 +906,4 @@
 </div>
 </body>
 </html>
+

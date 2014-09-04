@@ -1,0 +1,10 @@
+#leftTabset .popover-info{
+    display: none;
+}
+div.sidebar-nav{
+    padding-top:0px;
+}
+
+#filetab .dropdown-menu{
+    position:relative;
+}
